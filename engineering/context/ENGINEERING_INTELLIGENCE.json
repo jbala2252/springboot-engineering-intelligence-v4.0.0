@@ -1,0 +1,34 @@
+{
+  "generated_at_utc": "2026-11-14T21:02:26.535856+00:00",
+  "root": "/mnt/data/springboot-engineering-intelligence",
+  "mode": "read-only static analysis; stdlib only; no network or build execution",
+  "technology": {
+    "java_version_evidence": [],
+    "spring_boot_version_evidence": [],
+    "build_files": []
+  },
+  "architecture": {
+    "maven_projects": [],
+    "gradle_builds": [],
+    "declared_maven_modules": [],
+    "declared_maven_dependencies": [],
+    "configuration_files": [],
+    "java_package_dependency_edges": []
+  },
+  "code": {
+    "java_file_count": 0,
+    "packages": {},
+    "package_dependency_edges": [],
+    "top_imports": [],
+    "source_files": []
+  },
+  "quality_findings": [],
+  "duplicate_candidates": [],
+  "limitations": [
+    "Static heuristics can produce false positives/negatives.",
+    "Maven effective models, profiles, inherited properties and dependency mediation are not resolved.",
+    "Gradle scripts are inspected heuristically; no Gradle model is evaluated.",
+    "Package edges are approximations, not runtime call graphs.",
+    "No runtime profiling, heap diagnosis, SAST, build, or tests are performed."
+  ]
+}

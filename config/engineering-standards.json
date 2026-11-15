@@ -1,0 +1,88 @@
+{
+  "schema_version": "1.0",
+  "policy": {
+    "name": "Internal Spring Boot Engineering Baseline",
+    "mode": "advisory",
+    "fail_on_high": false,
+    "fail_on_medium": false,
+    "exclude_paths": [
+      ".git",
+      "target",
+      "build",
+      ".idea",
+      ".vscode"
+    ]
+  },
+  "rules": [
+    {
+      "id": "JAVA-001",
+      "severity": "high",
+      "title": "Review native Java deserialization",
+      "pattern": "ObjectInputStream",
+      "file_extensions": [
+        ".java"
+      ],
+      "guidance": "Verify trust boundary; prefer constrained schema-based serialization."
+    },
+    {
+      "id": "JAVA-002",
+      "severity": "medium",
+      "title": "Review ThreadLocal lifecycle",
+      "pattern": "\\bThreadLocal\\b",
+      "file_extensions": [
+        ".java"
+      ],
+      "guidance": "Check cleanup in finally, especially with pooled threads."
+    },
+    {
+      "id": "SPRING-001",
+      "severity": "medium",
+      "title": "Review scheduled job multi-instance behavior",
+      "pattern": "@Scheduled",
+      "file_extensions": [
+        ".java"
+      ],
+      "guidance": "Check overlap, replicas, idempotency, coordination and shutdown."
+    },
+    {
+      "id": "SPRING-002",
+      "severity": "medium",
+      "title": "Review asynchronous executor bounds",
+      "pattern": "@Async",
+      "file_extensions": [
+        ".java"
+      ],
+      "guidance": "Check bounded queues, rejection, exceptions and executor lifecycle."
+    },
+    {
+      "id": "REL-001",
+      "severity": "medium",
+      "title": "Review retry safety",
+      "pattern": "@Retryable|RetryTemplate",
+      "file_extensions": [
+        ".java"
+      ],
+      "guidance": "Check retry limits, backoff, jitter, idempotency and retry storms."
+    },
+    {
+      "id": "SEC-001",
+      "severity": "high",
+      "title": "Review process execution",
+      "pattern": "Runtime\\.getRuntime\\(\\)\\.exec|new\\s+ProcessBuilder",
+      "file_extensions": [
+        ".java"
+      ],
+      "guidance": "Validate input, avoid shell interpolation and constrain permissions."
+    },
+    {
+      "id": "QUAL-001",
+      "severity": "low",
+      "title": "Review stack trace printing",
+      "pattern": "printStackTrace\\s*\\(",
+      "file_extensions": [
+        ".java"
+      ],
+      "guidance": "Use structured logging and avoid sensitive data."
+    }
+  ]
+}

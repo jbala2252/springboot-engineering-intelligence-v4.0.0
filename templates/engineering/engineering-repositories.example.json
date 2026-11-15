@@ -1,0 +1,12 @@
+{
+  "repositories": [
+    {
+      "name": "module-a",
+      "path": "../module-a"
+    },
+    {
+      "name": "module-b",
+      "path": "../module-b"
+    }
+  ]
+}

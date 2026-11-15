@@ -1,0 +1,9 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "springboot-engineering-intelligence",
+  "version": "4.0.0",
+  "description": "Internal MCP-free Spring Boot engineering intelligence with cross-repository analysis, governance checks, standards, technical debt and maturity workflows.",
+  "author": {
+    "name": "Internal Engineering"
+  }
+}

@@ -1,0 +1,12 @@
+# Engineering Pull Request Review Checklist
+- [ ] Requirements and acceptance criteria are clear.
+- [ ] Existing implementation and repository conventions were inspected.
+- [ ] Module boundaries and dependency direction remain appropriate.
+- [ ] Reuse is based on demonstrated commonality.
+- [ ] Actual Java/Spring Boot baseline and API compatibility are respected.
+- [ ] Migration and rollback exist for breaking/data changes.
+- [ ] Timeouts, retries, idempotency and multi-instance behavior are reviewed.
+- [ ] Resource lifecycle, memory retention, executors and database impact are reviewed.
+- [ ] Security, authorization, validation, secrets and sensitive logging are reviewed.
+- [ ] Relevant tests/build/static checks were actually executed and reported accurately.
+- [ ] Documentation and configuration examples are updated.

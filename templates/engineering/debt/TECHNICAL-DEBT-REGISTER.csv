@@ -1,0 +1,1 @@
+id,title,area,repository,severity,impact,evidence,owner,status,estimated_effort,created_date,target_date,decision\nTD-001,Example duplicated retry policy,reliability,module-a,medium,Inconsistent retry behavior,Link to code or issue,Unassigned,open,2d,,,Investigate shared policy\n
